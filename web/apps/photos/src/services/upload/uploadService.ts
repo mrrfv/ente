@@ -1012,6 +1012,7 @@ const withThumbnail = async (
         fileTypeInfo.fileType == FILE_TYPE.IMAGE &&
         moduleState.isNativeImageThumbnailGenerationNotAvailable;
 
+    log.info({ f: "withThumbnail", electron, notAvailable, uploadItem });
     // 1. Native thumbnail generation using items's (effective) path.
     if (electron && !notAvailable && !(uploadItem instanceof File)) {
         try {

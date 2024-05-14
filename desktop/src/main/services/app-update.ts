@@ -82,13 +82,11 @@ export const setupAutoUpdater = (mainWindow: BrowserWindow) => {
      * the full update flow.
      */
 
-    /*
     autoUpdater.setFeedURL({
         provider: "github",
-        owner: "ente-io",
-        repo: "test-desktop-updates",
+        owner: "mnvr",
+        repo: "test-updates",
     });
-    */
 
     const oneDay = 1 * 24 * 60 * 60 * 1000;
     setInterval(() => void checkForUpdatesAndNotify(mainWindow), oneDay);
